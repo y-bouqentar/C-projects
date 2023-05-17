@@ -1,2 +1,14 @@
-﻿  library.cpp
-  MyLibrary.vcxproj -> C:\Users\YoussefBouqentar\source\repos\MyLibrary\x64\Debug\MyLibrary.exe
+﻿  main.cpp
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(27,28): error C2059: syntax error: ')'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\main.cpp(19,25): message : see reference to function template instantiation 'bool Library::addItem<Book>(T)' being compiled
+          with
+          [
+              T=Book
+          ]
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(21): error C2143: syntax error: missing ';' before '{'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(21): error C2181: illegal else without matching if
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(31,34): error C2059: syntax error: ')'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(35,3): error C2059: syntax error: 'else'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(38,3): error C2059: syntax error: '}'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(39,24): error C2059: syntax error: '}'
+C:\Users\YoussefBouqentar\source\repos\MyLibrary\MyLibrary\library.hpp(42,2): error C2059: syntax error: '}'
