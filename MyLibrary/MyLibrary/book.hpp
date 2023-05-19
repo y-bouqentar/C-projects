@@ -6,13 +6,22 @@
 class Book {
 
 public:
-	Book(std::string title, std::string author, std::time_t date) : _title{ title }, _Author{ author }, _releaseDate{ date } {};
-	auto get_Title() -> std::string;
-	auto get_Author() -> std::string;
-	auto get_Date() -> std::time_t;
+	Book(std::string title, std::string author, int date) : _title{ title }, _Author{ author }, _releaseYear{ date } {};
+	auto get_Title() -> std::string
+	{
+		return _title;
+	}
+	auto get_Author() -> std::string
+	{
+		return _Author;
+	}
+	auto get_Date() -> int
+	{
+		return _releaseYear;
+	}
 private:
 	std::string _title;
-	std::time_t _releaseDate;
+	int _releaseYear;
 	std::string _Author;
 
 };

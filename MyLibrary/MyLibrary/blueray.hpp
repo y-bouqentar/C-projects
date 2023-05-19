@@ -6,13 +6,22 @@
 class BlueRay {
 
 public:
-	BlueRay(std::string title, std::string director, std::time_t date) : _title{ title }, _director{ director }, _releaseDate{ date } {};
-	auto get_Title() -> std::string;
-	auto get_Director() -> std::string;
-	auto get_Date() -> std::time_t;
+	BlueRay(std::string title, std::string director, int date) : _title{ title }, _director{ director }, _releaseYear{ date } {};
+	auto get_Title() -> std::string
+	{
+		return _title;
+	}
+	auto get_Director() -> std::string
+	{
+		return _director;
+	}
+	auto get_Date() -> int
+	{
+		return _releaseYear;
+	}
 private:
 	std::string _title;
-	std::time_t _releaseDate;
+	int _releaseYear;
 	std::string _director;
 
 };
