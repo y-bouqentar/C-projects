@@ -64,3 +64,73 @@ auto Library::toStringBlueRays() -> std::string
 	}
 	return blueRayOutput.str();
 }
+auto Library::sortBooksAlphabethically() -> void
+{
+		// auto books = get_Books();I need to do const auto* for pointer but const won't allow the sorting so I use the value directly
+		if (_books.size() < 2)
+		{
+			throw std::runtime_error("Cannot perform sorting. Your book library contains less than 2 books");
+
+		}
+		std::sort(_books.begin(), _books.end(), [](Book& book1, Book& book2) {
+			return book1.get_Title() < book2.get_Title();
+			});
+	
+}
+auto Library::sortVinylsAlphabethically() -> void
+{
+	 
+	if (_vinyls.size() < 2)
+	{
+		throw std::runtime_error("Cannot perform sorting. Your Vinyl library contains less than 2 books");
+	}
+	std::sort(_vinyls.begin(), _vinyls.end(), [](Vinyl vinyl1, Vinyl vinyl2) {
+		return vinyl1.get_Title() < vinyl2.get_Title();
+		});
+}
+auto Library::sortBlueRaysAlphabethically() -> void
+{
+	
+	if (_bluerays.size() < 2)
+	{
+		throw std::runtime_error("Cannot perform sorting. Your blueRay library contains less than 2 books");
+
+	}
+	std::sort(_bluerays.begin(), _bluerays.end(), [](BlueRay blueRay1, BlueRay blueRay2) {
+		return blueRay1.get_Title() < blueRay2.get_Title();
+		});
+}
+auto Library::sortBooksByDate() -> void
+{
+	if (_books.size() < 2)
+	{
+		throw std::runtime_error("Cannot perform sorting. Your book library contains less than 2 books");
+
+	}
+	std::sort(_books.begin(), _books.end(), [](Book& book1, Book& book2) {
+		return book1.get_Date() < book2.get_Date();
+		});
+}
+auto Library::sortVinylsByDate() -> void
+{
+	if (_vinyls.size() < 2)
+	{
+		throw std::runtime_error("Cannot perform sorting. Your Vinyl library contains less than 2 books");
+
+	}
+	std::sort(_vinyls.begin(), _vinyls.end(), [](Vinyl& vinyl1, Vinyl& vinyl2) {
+		return vinyl1.get_Date() < vinyl2.get_Date();
+		});
+}
+auto Library::sortBlueRaysByDate()->void
+{
+	
+	if (_bluerays.size() < 2)
+	{
+		throw std::runtime_error("Cannot perform sorting. Your blueRay library contains less than 2 books");
+
+	}
+	std::sort(_bluerays.begin(), _bluerays.end(), [](BlueRay& blueRay1, BlueRay& blueRay2) {
+		return blueRay1.get_Date() < blueRay2.get_Date();
+		});
+}

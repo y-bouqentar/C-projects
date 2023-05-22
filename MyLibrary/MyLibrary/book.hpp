@@ -19,6 +19,7 @@ public:
 	{
 		return _releaseYear;
 	}
+	auto isequal(Book book) -> bool;
 private:
 	std::string _title;
 	int _releaseYear;

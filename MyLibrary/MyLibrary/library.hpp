@@ -5,6 +5,8 @@
 #include "vinyl.hpp"
 #include "blueray.hpp"
 #include <string>
+#include <algorithm>
+#include <stdexcept>
 
 
 
@@ -17,7 +19,7 @@ private:
 	std::vector<BlueRay> _bluerays;
 	std::vector<std::string> _rentedItems;
 public:
-	auto get_Books() -> std::vector<Book>
+	auto get_Books() -> std::vector<Book>//note : I have a seen online that people do reference here so auto* and I don't get why
 	{
 		return _books;
 	}
@@ -33,34 +35,34 @@ public:
 	{
 		return _rentedItems;
 	}
-	template<typename T>
-	auto addItem(T item) -> bool
+	template<typename T2>
+	auto addItem(T2 item) -> bool
 	{
 		if (exists(item))
 		{
-			return false;//the item is rented already therefore you cannot rent it
+			return false; // The item is already rented, so you cannot rent it again.
 		}
 
-		if constexpr (std::is_same<T, Book>::value)//still unsure about the exact use of constexpr 
+		if constexpr (std::is_same<T2, Book>::value)//still unsure about the exact use of constexpr 
 		{
 			_books.push_back(item);
 		}
-		else if constexpr (std::is_same<T, Vinyl>::value)
+		else if constexpr (std::is_same<T2, Vinyl>::value)
 		{
 			_vinyls.push_back(item);
 		}
-		else if constexpr (std::is_same<T, BlueRay>::value)
+		else if constexpr (std::is_same<T2, BlueRay>::value)
 		{
 			_bluerays.push_back(item);
 		}
-		else { return false; }
+		else { return false; }//wrong class given
 
 		return true;//item successfully rented
 	}
 	template<typename T>
 	auto isrented(T item) -> bool
 	{
-		if constexpr (std::is_same<T, Book>)
+		if constexpr (std::is_same<T, Book>::value)
 		{
 			for (int i = 0; i < _rentedItems.size(); i++)
 			{
@@ -71,7 +73,7 @@ public:
 				}
 			}
 		}
-		else if constexpr (std::is_same<T, Vinyl>)
+		else if constexpr (std::is_same<T, Vinyl>::value)
 		{
 			for (int i = 0; i < _rentedItems.size(); i++)
 			{
@@ -81,7 +83,7 @@ public:
 				}
 			}
 		}
-		else if constexpr(std::is_same<T, BlueRay>)
+		else if constexpr(std::is_same<T, BlueRay>::value)
 		{
 			for (int i = 0; i < _rentedItems.size(); i++)
 			{
@@ -94,9 +96,52 @@ public:
 		return false;
 	}
 	template<typename T>
-	auto exists(T item) -> bool
+	auto exists(const T& item) -> bool
 	{
-		return false;//to be implemented later TO DO
+		if constexpr (std::is_same<T, Book>::value)
+		{
+			if (get_Books().empty())
+			{
+				return false;
+			}
+			for (int i = 0; i < get_Books().size(); i++)
+			{
+				if (get_Books().at(i).isequal(static_cast<Book>(item)))
+				{
+					return true;
+				}
+			}
+		}
+		else if constexpr (std::is_same<T, Vinyl>::value)
+		{
+			if (get_Vinyls().empty())
+			{
+				return false;
+			}
+			for (int i = 0; i < get_Vinyls().size(); i++)
+			{
+				if (get_Vinyls().at(i).isequal(static_cast<Vinyl>(item)))
+				{
+					return true;
+				}
+			}
+		}
+		else if constexpr (std::is_same<T, BlueRay>::value)
+		{
+			if (get_BlueRays().empty())
+			{
+				return false;
+			}
+			for (int i = 0; i < get_BlueRays().size(); i++)
+			{
+				if (get_BlueRays().at(i).isequal(static_cast<BlueRay>(item)))
+				{
+					return true;
+				}
+			}
+		}
+				return false;
+		
 	}
 	template<typename T>
 	auto find(std::string title) -> T //takes a string title and return the vector element associated with that name
@@ -137,15 +182,15 @@ public:
 			{
 				return false;//the item is rented already therefore you cannot rent it
 			}
-			if (std::is_same<T, Book>)//i chose this approach to mimic a real-life notebook of the rented or not rented book, but it comes with extra work
+			if (std::is_same<T, Book>::value)//i chose this approach to mimic a real-life notebook of the rented or not rented book, but it comes with extra work
 			{
 				_rentedItems.push_back(static_cast<Book>(item)._title);
 			}
-			else if (std::is_same<T, Vinyl>)
+			else if (std::is_same<T, Vinyl>::value)
 			{
 				_rentedItems.push_back(static_cast<Vinyl>(item)._title);
 			}
-			else if (std::is_same<T, BlueRay>)
+			else if (std::is_same<T, BlueRay>::value)
 			{
 				_rentedItems.push_back(static_cast<BlueRay>(item)._title);
 			}
@@ -153,10 +198,13 @@ public:
 			
 			return true;//item successfully rented
 		}
-		template<typename T>
-		auto sortByAuthor(std::string author) -> std::vector<T>;
-		template<typename T>
-		auto sortbyDate(std::time_t date) -> std::vector<T>;
+		auto sortBooksAlphabethically() -> void;
+		auto sortVinylsAlphabethically() -> void;
+		auto sortBlueRaysAlphabethically() -> void;
+		auto sortBooksByDate() -> void;
+		auto sortVinylsByDate() -> void;
+		auto sortBlueRaysByDate() -> void;
+		
 	
 		
 };

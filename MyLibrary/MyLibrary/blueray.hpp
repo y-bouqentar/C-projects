@@ -19,6 +19,8 @@ public:
 	{
 		return _releaseYear;
 	}
+	auto isequal(BlueRay blueray) -> bool;
+
 private:
 	std::string _title;
 	int _releaseYear;

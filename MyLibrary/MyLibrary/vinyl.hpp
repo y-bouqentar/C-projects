@@ -19,6 +19,7 @@ public :
 	{
 		return _releaseYear;
 	}
+	auto isequal(Vinyl vinyl) -> bool;
 private:
 	std::string _title;
 	std::string _singer;
