@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#include "book.hpp"
-#include "vinyl.hpp"
-#include "blueray.hpp"
+#include "Book.hpp"
+#include "Vinyl.hpp"
+#include "Blueray.hpp"
 #include <string>
 #include <algorithm>
 #include <stdexcept>
@@ -17,9 +17,9 @@ private:
 	std::vector<Book> _books;
 	std::vector<Vinyl> _vinyls;
 	std::vector<BlueRay> _bluerays;
-	std::vector<std::string> _rentedItems;
+	std::vector<std::string> _rentedItems;//this one should be map or unordered set with keys references to every book vinyls etc.. 
 public:
-	auto get_Books() -> std::vector<Book>//note : I have a seen online that people do reference here so auto* and I don't get why
+	auto get_Books() ->  std::vector<Book>//note :for containers or huge data holders, return reference like this const &
 	{
 		return _books;
 	}
@@ -40,10 +40,10 @@ public:
 	{
 		if (exists(item))
 		{
-			return false; // The item is already rented, so you cannot rent it again.
+			return false; 
 		}
 
-		if constexpr (std::is_same<T2, Book>::value)//still unsure about the exact use of constexpr 
+		if constexpr (std::is_same<T2, Book>::value)//still unsure about the exact use of constexpr, I know it makes the compiler only compile the If that is true and doesn't compile the rest
 		{
 			_books.push_back(item);
 		}
@@ -62,6 +62,10 @@ public:
 	template<typename T>
 	auto isrented(T item) -> bool
 	{
+		if (!exists(item))
+		{
+			throw std::runtime_error("The Item you are looking for does not exist");
+		}
 		if constexpr (std::is_same<T, Book>::value)
 		{
 			for (int i = 0; i < _rentedItems.size(); i++)
@@ -96,7 +100,7 @@ public:
 		return false;
 	}
 	template<typename T>
-	auto exists(const T& item) -> bool
+	auto exists(const T& item) -> bool //a helper method to make sure an item exists without having to do the whole work again
 	{
 		if constexpr (std::is_same<T, Book>::value)
 		{
@@ -146,32 +150,60 @@ public:
 	template<typename T>
 	auto find(std::string title) -> T //takes a string title and return the vector element associated with that name
 	{
-		for (int i = 0; i < _books.size(); i++)//it could've been cut into 3 different methods findbook / findvinyl and so on but I chose this one for more compactness
+		
+		if constexpr (std::is_same<T, Book>::value)
 		{
-			if (_books.at(i).get_Title() == title)
+			if (get_Books().empty())
 			{
-				return _books.at(i);
+				std::cout << "Cannot find Item. your book container is empty" << std::endl;
+				return;
+			}
+			for (int i = 0; i < _books.size(); i++)//it could've been cut into 3 different methods findbook / findvinyl and so on but I chose this one for more compactness
+			{
+				if (_books.at(i).get_Title() == title)
+				{
+					return _books.at(i);
+				}
 			}
 		}
-		for (int i = 0; i < _vinyls.size(); i++)//if not found at books then vinyls
+		else if constexpr (std::is_same<T, Vinyl> ::value)
 		{
-			if (_vinyls.at(i).get_Title() == title)
+			if (get_Vinyls().empty())
 			{
-				return _vinyls.at(i);
+				std::cout << "Cannot find Item. your Vinyl container is empty" << std::endl;
+				return ;
+			}
+			for (int i = 0; i < _vinyls.size(); i++)//if not found at books then vinyls
+			{
+				if (_vinyls.at(i).get_Title() == title)
+				{
+					return _vinyls.at(i);
+				}
 			}
 		}
-		for (int i = 0; i < _bluerays.size(); i++)
+		else if constexpr (std::is_same<T, BlueRay>::value)
 		{
-			if (_bluerays.at(i).get_Title() == title)
+			if (get_BlueRays().empty())
 			{
-				return _bluerays.at(i);
+				std::cout << "Cannot find Item. your BlueRay container is empty" << std::endl;
+				return;
+			}
+			for (int i = 0; i < _bluerays.size(); i++)
+			{
+				if (_bluerays.at(i).get_Title() == title)
+				{
+					return _bluerays.at(i);
+				}
 			}
 		}
-		return T(); //if nothing is found
+		throw std::runtime_error("Unaccepted Class"); //if its none of the 3 classes we have
+		
+		
 	}
 	auto toStringBooks() -> std::string;
 	auto toStringVinyls() -> std::string;
 	auto toStringBlueRays() -> std::string;
+	auto toStringRentedItems() -> std::string;
 	auto toStringAllLibrary() -> std::string;
 	
 
@@ -180,23 +212,27 @@ public:
 		{
 			if (isrented(item))
 			{
+				std::cout << "Item has already been rented" << std::endl;
 				return false;//the item is rented already therefore you cannot rent it
 			}
-			if (std::is_same<T, Book>::value)//i chose this approach to mimic a real-life notebook of the rented or not rented book, but it comes with extra work
+			if constexpr (std::is_same<T, Book>::value)//i chose this approach to mimic a real-life notebook of the rented or not rented book, but it comes with extra work
 			{
-				_rentedItems.push_back(static_cast<Book>(item)._title);
+				_rentedItems.push_back(static_cast<Book>(item).get_Title());
+				return true;
 			}
-			else if (std::is_same<T, Vinyl>::value)
+			else if constexpr (std::is_same<T, Vinyl>::value)
 			{
-				_rentedItems.push_back(static_cast<Vinyl>(item)._title);
+				_rentedItems.push_back(static_cast<Vinyl>(item).get_Title());
+				return true;
 			}
-			else if (std::is_same<T, BlueRay>::value)
+			else if constexpr(std::is_same<T, BlueRay>::value)
 			{
-				_rentedItems.push_back(static_cast<BlueRay>(item)._title);
+				_rentedItems.push_back(static_cast<BlueRay>(item).get_Title());
+				return true;
 			}
-			else { return false; }
 			
-			return true;//item successfully rented
+			
+			return false;//wrong class used
 		}
 		auto sortBooksAlphabethically() -> void;
 		auto sortVinylsAlphabethically() -> void;

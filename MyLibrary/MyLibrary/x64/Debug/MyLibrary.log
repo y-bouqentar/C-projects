@@ -1,20 +1,64 @@
-﻿  main.cpp
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(46,3): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(50,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(54,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(65,3): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(76,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(86,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(101,3): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(99,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(115,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(99,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(129,8): warning C4984: 'if constexpr' is a C++17 language extension
-C:\Users\BOUQU\Cpp-projects\MyLibrary\MyLibrary\library.hpp(99,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
-  MyLibrary.vcxproj -> C:\Users\BOUQU\Cpp-projects\MyLibrary\x64\Debug\MyLibrary.exe
+﻿  Library.cpp
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(46,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(50,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(54,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(69,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(80,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(90,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(105,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(119,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(133,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(154,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(168,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(182,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(215,4): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(220,9): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(225,9): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+  main.cpp
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(46,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(50,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(54,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(39,7): message : This diagnostic occurred in the compiler generated function 'bool Library::addItem(T2)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(69,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(80,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(90,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(63,7): message : This diagnostic occurred in the compiler generated function 'bool Library::isrented(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(105,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(119,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(133,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(103,7): message : This diagnostic occurred in the compiler generated function 'bool Library::exists(const T &)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(154,3): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(168,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(182,8): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(151,7): message : This diagnostic occurred in the compiler generated function 'T Library::find(std::string)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(215,4): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(220,9): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(225,9): warning C4984: 'if constexpr' is a C++17 language extension
+C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\MyLibrary\Library.hpp(208,8): message : This diagnostic occurred in the compiler generated function 'bool Library::rentItem(T)'
+  Generating Code...
+  MyLibrary.vcxproj -> C:\Users\YoussefBouqentar\Cpp-projects\MyLibrary\x64\Debug\MyLibrary.exe

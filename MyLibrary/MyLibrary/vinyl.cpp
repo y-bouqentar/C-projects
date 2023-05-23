@@ -1,4 +1,4 @@
-#include "vinyl.hpp"
+#include "Vinyl.hpp"
 
 auto Vinyl::isequal(Vinyl vinyl) -> bool
 {

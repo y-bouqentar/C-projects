@@ -1,4 +1,4 @@
-#include "blueray.hpp"
+#include "Blueray.hpp"
 
 auto BlueRay::isequal(BlueRay blueray)-> bool
 {

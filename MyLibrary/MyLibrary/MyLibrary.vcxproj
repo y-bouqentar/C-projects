@@ -127,17 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="blueray.cpp" />
-    <ClCompile Include="book.cpp" />
-    <ClCompile Include="library.cpp" />
+    <ClCompile Include="Blueray.cpp" />
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Library.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="vinyl.cpp" />
+    <ClCompile Include="Vinyl.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="blueray.hpp" />
-    <ClInclude Include="book.hpp" />
-    <ClInclude Include="library.hpp" />
-    <ClInclude Include="vinyl.hpp" />
+    <ClInclude Include="Blueray.hpp" />
+    <ClInclude Include="Book.hpp" />
+    <ClInclude Include="Library.hpp" />
+    <ClInclude Include="Vinyl.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

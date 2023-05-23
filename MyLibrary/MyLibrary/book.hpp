@@ -6,14 +6,14 @@
 class Book {
 
 public:
-	Book(std::string title, std::string author, int date) : _title{ title }, _Author{ author }, _releaseYear{ date } {};
+	Book(std::string title, std::string author, int date) : _title{ title }, _author{ author }, _releaseYear{ date } {};
 	auto get_Title() -> std::string
 	{
 		return _title;
 	}
 	auto get_Author() -> std::string
 	{
-		return _Author;
+		return _author;
 	}
 	auto get_Date() -> int
 	{
@@ -23,6 +23,6 @@ public:
 private:
 	std::string _title;
 	int _releaseYear;
-	std::string _Author;
+	std::string _author;
 
 };

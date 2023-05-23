@@ -18,30 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="library.cpp">
+    <ClCompile Include="Library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="book.cpp">
+    <ClCompile Include="Book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="blueray.cpp">
+    <ClCompile Include="Blueray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vinyl.cpp">
+    <ClCompile Include="Vinyl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="book.hpp">
+    <ClInclude Include="Book.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="blueray.hpp">
+    <ClInclude Include="Blueray.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vinyl.hpp">
+    <ClInclude Include="Vinyl.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="library.hpp">
+    <ClInclude Include="Library.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
